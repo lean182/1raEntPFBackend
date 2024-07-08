@@ -7,7 +7,7 @@
 <h3>Manejo de productos</h3>
 
 <div align="center">
-    <img src="./imgREADME/Productos/GET de todos los productos.png" alt="GET de todos los producto" width="400" style="border: 10px solid #ffffff; box-shadow: 3px 3px 5px #ccc;"/>
+    <img src="./imgREADME/Productos/GET de todos los productos.png" alt="GET de todos los producto" width="400"/>
     <p>GET de todos los productos.</p>
 </div>
 
