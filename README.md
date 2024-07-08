@@ -49,7 +49,7 @@ Se adjuntan imagenes del manejo de productos y carritos.
 </div>
 
 <div align="center">
-    <img src="./imgREADME/Carritos/GET a un solo carrito.pngg" alt="GET a un solo carrito" width="400" style="border: 2px solid #000; box-shadow: 3px 3px 5px #ccc;"/>
+    <img src="./imgREADME/Carritos/GET a un solo carrito.png" alt="GET a un solo carrito" width="400" style="border: 2px solid #000; box-shadow: 3px 3px 5px #ccc;"/>
 </div>
 
 <div align="center">
