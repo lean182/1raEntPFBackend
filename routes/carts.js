@@ -51,6 +51,24 @@ router.get('/:cid', (req, res) => {
   res.json(cart.products);
 });
 
+// Obtener un producto específico de un carrito por ID
+router.get('/:cid/product/:pid', (req, res) => {
+  const carts = readCarts();
+  const { cid, pid } = req.params;
+
+  const cart = carts.find(c => c.id === parseInt(cid));
+  if (!cart) {
+    return res.status(404).json({ message: `Carrito con ID:${cid} no encontrado` });
+  }
+
+  const product = cart.products.find(p => p.product === parseInt(pid));
+  if (!product) {
+    return res.status(404).json({ message: `Producto con ID:${pid} no encontrado en el carrito` });
+  }
+
+  res.json(product);
+});
+
 // Agregar producto a un carrito
 router.post('/:cid/product/:pid', (req, res) => {
   const carts = readCarts();
@@ -100,7 +118,7 @@ router.delete('/:cid', (req, res) => {
   res.status(200).json({ message: `Carrito con ID:${cid} eliminado` });
 });
 
-// Eliminar producto de un carrito
+// Eliminar producto de un carrito por ID
 router.delete('/:cid/product/:pid', (req, res) => {
   const carts = readCarts();
   const { cid, pid } = req.params;
@@ -117,7 +135,7 @@ router.delete('/:cid/product/:pid', (req, res) => {
 
   carts[cartIndex].products.splice(productIndex, 1);
   writeCarts(carts);
-  res.status(200).json({ message: `Producto con ID:${pid} eliminado del carrito` });
+  res.status(200).json({ message: `Producto con ID:${pid} eliminado del carrito con ID:${cid}` });
 });
 
 module.exports = router;

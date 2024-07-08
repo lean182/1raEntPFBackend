@@ -44,13 +44,24 @@
     "thumbnails": "null"
   },
   {
-    "id": 5,
-    "title": "sin stock Acme 7638",
+    "id": 6,
+    "title": "Producto sin stock Acme 7638",
     "description": "Cocina más rapido que un corre caminos",
-    "code": "KJK123",
+    "code": "SsEa123",
     "price": "$900.000",
-    "status": "folse",
+    "status": "false",
     "stock": "0",
+    "category": "Electrodoméstico",
+    "thumbnails": "null"
+  },
+  {
+    "id": 7,
+    "title": "Producto para borrar Acme 7638",
+    "description": "Cocina más rapido que un corre caminos",
+    "code": "KsE123",
+    "price": "$1.180.000",
+    "status": "true",
+    "stock": "6",
     "category": "Electrodoméstico",
     "thumbnails": "null"
   }

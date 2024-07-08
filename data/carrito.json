@@ -12,12 +12,19 @@
         "product": 2,
         "title": "Heladera Acme 3665",
         "code": "HeAc456",
-        "quantity": 5
+        "quantity": 3
       }
     ]
   },
   {
-    "id": 2,
-    "products": []
+    "id": 3,
+    "products": [
+      {
+        "product": 1,
+        "title": "Cocina Acme 7638",
+        "code": "CoAc123",
+        "quantity": 6
+      }
+    ]
   }
 ]

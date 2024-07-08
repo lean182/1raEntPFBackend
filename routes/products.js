@@ -62,8 +62,6 @@ router.post('/', (req, res) => {
   products.push(newProduct);
   writeProducts(products);
   res.status(201).json({ message: `Producto agregado correctamente`, product: newProduct });
-
-
 });
 
 // Actualizar producto por ID
@@ -74,6 +72,12 @@ router.put('/:pid', (req, res) => {
   if (productIndex === -1) {
     return res.status(404).json({ message: `Producto con ID:${pid} no encontrado` });
   }
+
+  const { code } = req.body;
+  if (code && products.some((p, index) => p.code === code && index !== productIndex)) {
+    return res.status(400).json({ message: `Producto con el código:${code} ya existe` });
+  }
+
   const updatedProduct = { ...products[productIndex], ...req.body, id: products[productIndex].id };
   products[productIndex] = updatedProduct;
   writeProducts(products);
