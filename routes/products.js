@@ -31,7 +31,7 @@ router.get('/:pid', (req, res) => {
   const { pid } = req.params;
   const product = products.find(p => p.id === parseInt(pid));
   if (!product) {
-    return res.status(404).json({ message: 'Producto no encontrado' });
+    return res.status(404).json({ message: `Producto con ID:${pid} no encontrado` });
   }
   res.json(product);
 });
@@ -77,7 +77,7 @@ router.put('/:pid', (req, res) => {
   const updatedProduct = { ...products[productIndex], ...req.body, id: products[productIndex].id };
   products[productIndex] = updatedProduct;
   writeProducts(products);
-  res.json({ message: `Producto con ID:${pid} actualizado`, product: updatedProduct });
+  res.status(200).json({ message: `Producto con ID:${pid} actualizado`, product: updatedProduct });
 });
 
 // Eliminar producto por ID
@@ -90,7 +90,7 @@ router.delete('/:pid', (req, res) => {
   }
   products.splice(productIndex, 1);
   writeProducts(products);
-  res.json({ message: `Producto con ID:${pid} borrado` });
+  res.status(200).json({ message: `Producto con ID:${pid} eliminado` });
 });
 
 module.exports = router;

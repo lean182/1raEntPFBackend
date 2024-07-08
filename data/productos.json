@@ -45,20 +45,9 @@
   },
   {
     "id": 5,
-    "title": "para borrar Acme 7638",
-    "description": "Cocina más rapido que un corre caminos",
-    "code": "ERAc123",
-    "price": "$900.000",
-    "status": "true",
-    "stock": "6",
-    "category": "Electrodoméstico",
-    "thumbnails": "null"
-  },
-  {
-    "id": 6,
     "title": "sin stock Acme 7638",
     "description": "Cocina más rapido que un corre caminos",
-    "code": "KJKc123",
+    "code": "KJK123",
     "price": "$900.000",
     "status": "folse",
     "stock": "0",
